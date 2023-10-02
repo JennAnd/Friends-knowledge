@@ -14,22 +14,46 @@ To get started, follow these steps:
    ```
 
 2. Navigate to the project directory:
+
+   ```bash
    cd Friends-knowledge
 
-3. Install the project dependencies:
+   ```
+
+4. Install the project dependencies:
+
+   ```bash
    npm install
 
-4. Navigate to the server directory:
+    ```
+
+6. Navigate to the server directory:
+
+   ```bash
    cd src
+   
+    ```
 
-5. Install the server dependencies:
+8. Install the server dependencies:
+
+   ```bash
    npm install
 
-6. Start the Node.js server:
+    ```
+
+10. Start the Node.js server:
+
+   ```bash
    node server.js
 
-7. Start the React development server:
+ ```
+
+12. Start the React development server:
+
+   ```bash
    npm start
+
+ ```
 
 This will start the app in development mode. Open http://localhost:3000 in your web browser to play the game.
 
