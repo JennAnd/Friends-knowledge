@@ -15,28 +15,28 @@ To get started, follow these steps:
 
 2. Navigate to the project directory:
 
-`````bash
+```bash
   cd Friends-knowledge
 
 ```
 
 4. Install the project dependencies:
 
-````bash
+```bash
 npm install
 
 ```
 
 6. Navigate to the server directory:
 
-   ```bash
+```bash
   cd src
 
 ```
 
 8. Install the server dependencies:
 
-   ```bash
+```bash
   npm install
 
 ```
@@ -63,4 +63,3 @@ This project is deployed and accessible at "https://friends-knowledge.vercel.app
 
 ```
 
-`````
