@@ -14,25 +14,47 @@ To get started, follow these steps:
    ```
 
 2. Navigate to the project directory:
-   cd Friends-knowledge
+
+```bash
+  cd Friends-knowledge
+
+```
 
 3. Install the project dependencies:
-   npm install
+
+````bash
+  npm install
+
+```
 
 4. Navigate to the server directory:
-   cd src
+
+```bash
+  cd src
+
+```
 
 5. Install the server dependencies:
-   npm install
+```bash
+  npm install
+
+```
 
 6. Start the Node.js server:
-   node server.js
+```bash
+  node server.js
+
+```
 
 7. Start the React development server:
-   npm start
+```bash
+  npm start
+
+```
 
 This will start the app in development mode. Open http://localhost:3000 in your web browser to play the game.
 
 ## Deployment
 
 This project is deployed and accessible at "https://friends-knowledge.vercel.app/". You can play the game on desktop browsers for the best experience.
+````
