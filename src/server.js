@@ -57,5 +57,3 @@ async function fetchDataFromAPI() {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
-
-// run npm run server and npm run start

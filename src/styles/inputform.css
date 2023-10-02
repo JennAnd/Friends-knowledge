@@ -64,13 +64,3 @@ input::placeholder {
   color: #dc8400;
   font-size: 18px;
 }
-
-@media (max-width: 760px) {
-  .your-guesses {
-    max-height: 150px;
-  }
-  .input-form-container {
-    padding: 15px;
-    width: 70%;
-  }
-}

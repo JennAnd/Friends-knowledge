@@ -17,9 +17,9 @@ function GameInstructionsPopup({ showInstructions, onClose }) {
           If you guess correctly, you can move on to the next character by
           pressing the "Next Character" button. If your guess is wrong, keep
           trying until you get it right. If you hover over the hidden words you
-          can see the amount of characters. If you can't guess the character,
-          you can aswell press the "Next Character" button to skip to the next
-          one. Enjoy the game and test your "Friends" knowledge!"
+          can see the amount of characters. <br></br>If you can't guess the
+          character, you can aswell press the "Next Character" button to skip to
+          the next one. Enjoy the game and test your "Friends" knowledge!"
         </p>
       </div>
       <button className="popup-close" onClick={onClose}>

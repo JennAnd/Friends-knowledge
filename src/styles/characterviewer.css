@@ -5,11 +5,11 @@
 }
 
 .input-container {
-  flex: 0 0 200px; /* Fixed width of 200px for the input section */
+  flex: 0 0 200px;
 }
 
 .main-content {
-  flex-grow: 1; /* Takes up the remaining available width */
+  flex-grow: 1;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -18,12 +18,9 @@
   display: flex;
   align-items: center;
   position: absolute;
-  top: 7%; /* Adjust the top position as needed */
-  left: 60%; /* Adjust the left position as needed */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Center the container horizontally and vertically */
+  top: 7%;
+  left: 60%;
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
 
@@ -182,62 +179,29 @@
   }
 }
 
-@media (max-width: 950px) {
-  .game-title {
-    margin-left: 20%;
+/* Media query for screens with a width less than 1024 pixels */
+@media (max-width: 1023px) {
+  .character-viewer-container {
+    display: none;
+  }
+
+  .mobile-warning {
+    display: block;
+    color: rgba(245, 245, 245, 0.879);
+    font-family: "Helvetica Condensed", sans-serif;
+    font-size: 20px;
+    background-color: #c77f13;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
 }
 
-@media (max-width: 760px) {
-  .input-container {
-    flex: 1;
-    position: absolute;
-    bottom: 0; /* Fix the input-container to the bottom */
-    width: 100%; /* Take up the full width */
-    max-height: 200px;
-    margin-left: 20px;
-  }
-
-  .character-box {
-    margin-top: 4%;
-    max-height: 420px;
-  }
-  .abstract {
-    font-size: 14px;
-  }
-  .thumbnail-placeholder {
-    width: 150px;
-    height: 150px;
-  }
-  .game-title {
-    font-size: 22px;
-  }
-
-  .title {
-    font-size: 18px;
-  }
-  .container {
-    top: 10%; /* Adjust the top position as needed */
-    left: 76%; /* Adjust the left position as needed */
-  }
-}
-
-/* Media query for screens with a width of 500px or less */
-@media (max-width: 500px) {
-  .character-box {
-    flex-direction: column;
-  }
-
-  .image {
-    margin-top: 10px;
-  }
-
-  .next-button {
-    margin-top: 10px;
-    align-self: flex-start;
-  }
-
-  .image {
-    margin-top: 10px;
+/* Hide the mobile-warning element for screens with a width of 1024 pixels or more */
+@media (min-width: 1024px) {
+  .mobile-warning {
+    display: none;
   }
 }
