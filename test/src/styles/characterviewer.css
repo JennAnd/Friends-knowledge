@@ -1,0 +1,243 @@
+/* --------CharacterViewer.css-------- */
+
+.character-viewer-container {
+  display: flex;
+}
+
+.input-container {
+  flex: 0 0 200px; /* Fixed width of 200px for the input section */
+}
+
+.main-content {
+  flex-grow: 1; /* Takes up the remaining available width */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 7%; /* Adjust the top position as needed */
+  left: 60%; /* Adjust the left position as needed */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Center the container horizontally and vertically */
+  z-index: 1;
+}
+
+.game-title {
+  color: #ffffffab;
+  font-family: "Trade Gothic Bold Condensed";
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  margin-left: 16%;
+}
+
+.not-guessed-word {
+  color: #d9d9d9;
+}
+
+.game-rules {
+  background-color: transparent;
+  color: #ffffffab;
+  font-family: "Helvetica Condensed";
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 9%;
+}
+
+.game-rules:hover {
+  color: #ffffffc7;
+}
+
+.character-box {
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: 4%;
+  margin-bottom: 4%;
+  margin-right: 4%;
+  margin-top: 8%;
+  filter: blur(0);
+  max-height: 550px;
+}
+
+.character-box.popup-open {
+  filter: blur(5px);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.popup-container {
+  z-index: 1001;
+  position: absolute;
+}
+
+.overlay.overlay-visible {
+  display: block;
+}
+
+.character-box::before,
+.character-box::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.character-box::before {
+  top: 5px;
+  left: 5px;
+}
+
+.character-box::after {
+  bottom: 5px;
+  right: 5px;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 14px;
+  margin-bottom: 10px;
+  display: block;
+  border: 1px solid #ffffffc7;
+  border-radius: 2px;
+}
+
+.next-button {
+  background-color: #dc8400;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: "Trade Gothic Bold Condensed";
+  align-self: flex-end;
+  margin-top: -45px;
+}
+
+.next-button:hover {
+  background-color: #db8f1e;
+}
+
+.abstract {
+  color: rgba(245, 245, 245, 0.879);
+  font-family: "Helvetica Condensed";
+  line-height: 26px;
+  letter-spacing: 0.54px;
+}
+
+.thumbnail-placeholder {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 14px;
+  margin-bottom: 10px;
+  display: block;
+  border: 1px solid #ffffffc7;
+  border-radius: 2px;
+}
+
+.spinner-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+@media (max-width: 1100px) {
+  .game-title {
+    margin-left: 18%;
+  }
+}
+
+@media (max-width: 950px) {
+  .game-title {
+    margin-left: 20%;
+  }
+}
+
+@media (max-width: 760px) {
+  .input-container {
+    flex: 1;
+    position: absolute;
+    bottom: 0; /* Fix the input-container to the bottom */
+    width: 100%; /* Take up the full width */
+    max-height: 200px;
+    margin-left: 20px;
+  }
+
+  .character-box {
+    margin-top: 4%;
+    max-height: 420px;
+  }
+  .abstract {
+    font-size: 14px;
+  }
+  .thumbnail-placeholder {
+    width: 150px;
+    height: 150px;
+  }
+  .game-title {
+    font-size: 22px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+  .container {
+    top: 10%; /* Adjust the top position as needed */
+    left: 76%; /* Adjust the left position as needed */
+  }
+}
+
+/* Media query for screens with a width of 500px or less */
+@media (max-width: 500px) {
+  .character-box {
+    flex-direction: column;
+  }
+
+  .image {
+    margin-top: 10px;
+  }
+
+  .next-button {
+    margin-top: 10px;
+    align-self: flex-start;
+  }
+
+  .image {
+    margin-top: 10px;
+  }
+}

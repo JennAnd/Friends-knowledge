@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Trade Gothic Bold Condensed";
+  src: url("../fonts/tradegothic-boldcondensed.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica Condensed";
+  src: url("../fonts/helvetica-condensed.ttf") format("truetype");
+}

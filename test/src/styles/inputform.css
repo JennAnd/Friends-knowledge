@@ -1,0 +1,76 @@
+/* --------InputForm.js--------*/
+.input-form-container {
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  width: 256px;
+}
+
+.submit-guess {
+  background-color: #dc8400;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: "Trade Gothic Bold Condensed";
+}
+
+.submit-guess:hover {
+  background-color: #db8f1e;
+}
+
+.your-guesses {
+  position: relative;
+  overflow-y: auto;
+  max-height: 630px;
+  scrollbar-width: thin;
+  color: #ffffffab;
+  font-family: "Trade Gothic Bold Condensed";
+  font-size: 16px;
+}
+
+label {
+  color: #ffffffab;
+  font-family: "Trade Gothic Bold Condensed";
+  font-size: 14px;
+}
+
+input {
+  padding: 4px 8px;
+  margin: 10px 4px;
+  background-color: rgba(245, 245, 245, 0.879);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.your-guesses::after {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffffab;
+  font-family: "Trade Gothic Bold Condensed";
+  font-size: 14px;
+}
+
+.matching-guess {
+  color: #dc8400;
+  font-size: 18px;
+}
+
+@media (max-width: 760px) {
+  .your-guesses {
+    max-height: 150px;
+  }
+  .input-form-container {
+    padding: 15px;
+    width: 70%;
+  }
+}
