@@ -1,6 +1,6 @@
 # "Friends" Knowledge
 
-Welcome to "Friends" Knowledge! This project is a web-based trivia game where you can test your knowledge of different charactyers in the TV show "Friends". Please note that this game is optimized for desktop use and is not recommended for mobile devices.
+Welcome to "Friends" Knowledge! This project is a web-based trivia game where you can test your knowledge of different characters in the TV show "Friends". This project retrieves character information from Fandom using an API. Please note that this game is optimized for desktop use and is not recommended for mobile devices.
 
 ## Getting Started
 
