@@ -50,8 +50,8 @@ node server.js
 
 12. Start the React development server:
 
-  ```bash
- npm start
+```bash
+npm start
 
 ```
 
@@ -63,3 +63,4 @@ This project is deployed and accessible at "https://friends-knowledge.vercel.app
 
 ```
 
+```
