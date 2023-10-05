@@ -41,7 +41,7 @@ npm install
 
 ```
 
-6. Start the NodeJS server:
+6. Start the Node.js server:
 
 ```bash
 node server.js
