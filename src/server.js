@@ -7,7 +7,7 @@ const axios = require("axios");
 // for app variable and chosen port for incoming requests
 const app = express();
 const port = 3005;
-
+//sätt en processenv port här
 // allows cross-origin requests
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");

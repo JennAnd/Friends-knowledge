@@ -21,6 +21,7 @@ function CharacterViewer() {
   const [guesses, setGuesses] = useState([]);
   const [newGuesses, setNewGuesses] = useState([]); // Define the newGuesses state
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  //variabel för herokuurlen här
 
   // Update windowWidth state when the window is resized
   useEffect(() => {
@@ -95,6 +96,7 @@ function CharacterViewer() {
   /* Fetch character data from the API */
   const fetchData = async () => {
     try {
+      //herokuurlen ändra
       const response = await axios.get("/api/characters", {
         headers: {
           Accept: "application/json",
@@ -133,6 +135,7 @@ function CharacterViewer() {
   /*  Fetch character thumbnail data when the current character changes */
   const fetchThumbnail = async (character) => {
     try {
+      //här med
       const response = await axios.get("/api/thumbnails", {
         params: { url: character.thumbnail },
         responseType: "blob",
