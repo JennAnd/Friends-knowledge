@@ -105,7 +105,6 @@ function CharacterViewer() {
           },
         }
       );
-      const data = await response.json();
 
       const randomizedCharacters = shuffleArray(
         charactersWithThumbnailAndAbstract
