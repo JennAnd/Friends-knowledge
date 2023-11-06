@@ -97,13 +97,25 @@ function CharacterViewer() {
   const fetchData = async () => {
     try {
       //herokuurlen ändra
-      const response = await fetch(
-        "https://friends-knowledge-4d5f967a6a0b.herokuapp.com/api/characters",
-        {
-          headers: {
-            Accept: "application/json",
-          },
-        }
+      const response = await axios.get("/api/characters", {
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      const excludedCharacterIds = [
+        19359, 3398, 9223, 1901, 20041, 4998, 5247, 3207, 5203, 4901, 5204,
+        18174, 5377, 5375, 3445, 4669, 4939, 22755, 26222, 6265, 4033, 7605,
+        18042, 2457, 8982, 22982, 5180, 3260, 22071, 18252, 16484, 2208, 2762,
+        5040,
+      ];
+
+      const charactersWithThumbnailAndAbstract = response.data.filter(
+        (character) =>
+          character.thumbnail !== null &&
+          character.abstract !== null &&
+          character.abstract.length >= 100 &&
+          !excludedCharacterIds.includes(character.id)
       );
 
       const randomizedCharacters = shuffleArray(
@@ -124,13 +136,10 @@ function CharacterViewer() {
   const fetchThumbnail = async (character) => {
     try {
       //här med
-      const response = await fetch(
-        "https://friends-knowledge-4d5f967a6a0b.herokuapp.com/api/thumbnails?url=${character.thumbnail",
-        {
-          params: { url: character.thumbnail },
-          responseType: "blob",
-        }
-      );
+      const response = await axios.get("/api/thumbnails", {
+        params: { url: character.thumbnail },
+        responseType: "blob",
+      });
       const thumbnailUrl = URL.createObjectURL(response.data);
       setCurrentThumbnail(thumbnailUrl);
     } catch (error) {

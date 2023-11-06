@@ -4,20 +4,19 @@ const express = require("express");
 // make HTTP request
 const axios = require("axios");
 
-const cors = require("cors");
-
 // for app variable and chosen port for incoming requests
 const app = express();
-const port = process.env.PORT || 3005;
-
+const port = 3005;
+//sätt en processenv port här
 // allows cross-origin requests
-app.use(
-  cors({
-    origin: "https://friends-knowledge.vercel.app", // Update this with your frontend's URL
-    methods: ["GET", "POST"],
-    credentials: true,
-  })
-);
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 
 // defines a route for handling characters GET requests and fetch data from API
 app.get("/api/characters", async (req, res) => {
