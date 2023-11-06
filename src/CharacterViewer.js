@@ -8,6 +8,8 @@ import GameInstructionsPopup from "./GameInstructions";
 import InputForm from "./InputForm";
 
 function CharacterViewer() {
+  const serverUrl =
+    "https://friends-characters-game-04578a8a34cb.herokuapp.com/";
   const [showInstructions, setShowInstructions] = useState(false);
   const [characters, setCharacters] = useState([]);
   const [currentCharacter, setCurrentCharacter] = useState(null);
@@ -97,7 +99,7 @@ function CharacterViewer() {
   const fetchData = async () => {
     try {
       //herokuurlen ändra
-      const response = await axios.get("/api/characters", {
+      const response = await fetch(serverUrl + "/api/characters", {
         headers: {
           Accept: "application/json",
         },
@@ -136,7 +138,7 @@ function CharacterViewer() {
   const fetchThumbnail = async (character) => {
     try {
       //här med
-      const response = await axios.get("/api/thumbnails", {
+      const response = await fetch(serverUrl + "/api/thumbnails", {
         params: { url: character.thumbnail },
         responseType: "blob",
       });
