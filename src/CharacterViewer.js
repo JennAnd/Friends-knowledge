@@ -8,8 +8,7 @@ import GameInstructionsPopup from "./GameInstructions";
 import InputForm from "./InputForm";
 
 function CharacterViewer() {
-  const serverUrl =
-    "https://friends-characters-game-04578a8a34cb.herokuapp.com/";
+  const serverUrl = "https://friends-knowledge-4d5f967a6a0b.herokuapp.com/";
   const [showInstructions, setShowInstructions] = useState(false);
   const [characters, setCharacters] = useState([]);
   const [currentCharacter, setCurrentCharacter] = useState(null);
