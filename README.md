@@ -57,10 +57,6 @@ npm start
 
 This will start the app in development mode. Open http://localhost:3000 in your web browser to play the game.
 
-## Deployment
 
-This project is deployed and accessible at "https://friends-knowledge.vercel.app/". You can play the game on desktop browsers for the best experience.
-
-```
 
 ```
