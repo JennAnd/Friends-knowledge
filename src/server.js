@@ -13,11 +13,12 @@ const port = process.env.PORT || 3005;
 // allows cross-origin requests
 app.use(
   cors({
-    origin: process.env.corsOrigin || "http://localhost:3000",
+    origin: "https://friends-knowledge.vercel.app", // Update this with your frontend's URL
     methods: ["GET", "POST"],
     credentials: true,
   })
 );
+
 // defines a route for handling characters GET requests and fetch data from API
 app.get("/api/characters", async (req, res) => {
   try {
