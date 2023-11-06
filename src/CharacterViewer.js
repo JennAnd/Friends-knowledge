@@ -8,6 +8,7 @@ import GameInstructionsPopup from "./GameInstructions";
 import InputForm from "./InputForm";
 
 function CharacterViewer() {
+  const herokuURL = "https://friends-knowledge-4d5f967a6a0b.herokuapp.com";
   const [showInstructions, setShowInstructions] = useState(false);
   const [characters, setCharacters] = useState([]);
   const [currentCharacter, setCurrentCharacter] = useState(null);
@@ -97,14 +98,11 @@ function CharacterViewer() {
   const fetchData = async () => {
     try {
       //herokuurlen ändra
-      const response = await fetch(
-        "https://friends-knowledge-4d5f967a6a0b.herokuapp.com/api/characters",
-        {
-          headers: {
-            Accept: "application/json",
-          },
-        }
-      );
+      const response = await fetch(`${herokuURL}/api/characters`, {
+        headers: {
+          Accept: "application/json",
+        },
+      });
 
       const excludedCharacterIds = [
         19359, 3398, 9223, 1901, 20041, 4998, 5247, 3207, 5203, 4901, 5204,
@@ -139,13 +137,10 @@ function CharacterViewer() {
   const fetchThumbnail = async (character) => {
     try {
       //här med
-      const response = await fetch(
-        "https://friends-knowledge-4d5f967a6a0b.herokuapp.com/api/thumbnails",
-        {
-          params: { url: character.thumbnail },
-          responseType: "blob",
-        }
-      );
+      const response = await fetch(`${herokuURL}/api/thumbnails`, {
+        params: { url: character.thumbnail },
+        responseType: "blob",
+      });
       const thumbnailUrl = URL.createObjectURL(response.data);
       setCurrentThumbnail(thumbnailUrl);
     } catch (error) {
