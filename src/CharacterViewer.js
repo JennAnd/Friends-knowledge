@@ -103,6 +103,7 @@ function CharacterViewer() {
           Accept: "application/json",
         },
       });
+      const data = await response.json();
 
       const excludedCharacterIds = [
         19359, 3398, 9223, 1901, 20041, 4998, 5247, 3207, 5203, 4901, 5204,
