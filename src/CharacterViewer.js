@@ -141,7 +141,7 @@ function CharacterViewer() {
     try {
       //här med
       const response = await fetch(
-        "https://friends-knowledge-4d5f967a6a0b.herokuapp.com/api/thumbnails",
+        "https://friends-knowledge-4d5f967a6a0b.herokuapp.com/api/thumbnails?url=${character.thumbnail",
         {
           params: { url: character.thumbnail },
           responseType: "blob",
